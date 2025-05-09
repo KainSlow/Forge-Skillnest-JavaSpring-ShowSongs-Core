@@ -15,9 +15,11 @@
             Buenas canciones
         </caption>
         <thead>
+            <tr> <a class="btn" href="/canciones/formulario/agregar">Agregar cancion</a>  </tr>
             <tr>
                 <th> Titulo </th>
                 <th> Autor </th>
+                <th> Album </th>
                 <th> Detalle </th>
             </tr>
         </thead>
@@ -26,6 +28,7 @@
             <tr>
                 <td> ${cancion.titulo} </td>
                 <td> ${cancion.artista} </td>
+                <td> ${cancion.album} </td>
                 <td> <a class="btn" href="/canciones/detalle/${cancion.id}">Detalles</a></td>
             </tr>
             </c:forEach>

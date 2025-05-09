@@ -14,6 +14,7 @@ import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "canciones")
@@ -24,19 +25,23 @@ public class Cancion {
     private long id;
 
     @NonNull
-    @Column(nullable = false )
+    @Column(nullable = false)
+    @Size(min = 5, message = "Por favor, ingresa un título")
     private String titulo;
 
     @NonNull
-    @Column(nullable = false )
+    @Column(nullable = false)
+    @Size(min = 3, message = "Por favor, ingresa un artista válido")
     private String artista;
 
+    @Size(min = 3, message = "Por favor, ingresa un album válido")
     private String album;
 
+    @Size(min = 3, message = "Por favor, ingresa un género válido")
     private String genero;
 
+    @Size(min = 3, message = "Por favor, ingresa un idioma válido")
     private String idioma;
-
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "fecha_creacion")
@@ -46,24 +51,24 @@ public class Cancion {
     @Column(name = "fecha_actualizacion")
     private Date fechaActualizacion;
 
-    public Cancion(){
+    public Cancion() {
         this.titulo = "Desconocido";
         this.artista = "Desconocido";
     }
 
-    public Cancion(String titulo, String artista){
+    public Cancion(String titulo, String artista) {
         this.titulo = titulo;
         this.artista = artista;
     }
 
     @PrePersist
-    protected void onCreate(){
+    protected void onCreate() {
         this.fechaActualizacion = new Date();
         this.fechaCreacion = new Date();
     }
 
     @PreUpdate
-    protected void onUpdate(){
+    protected void onUpdate() {
         this.fechaActualizacion = new Date();
     }
 
