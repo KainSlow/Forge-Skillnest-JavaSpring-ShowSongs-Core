@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body class="panel bg col gap pad acenter">
     <h1>${cancion.titulo}</h1>
