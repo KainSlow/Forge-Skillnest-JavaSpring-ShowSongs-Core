@@ -10,55 +10,64 @@ h1 {
   color: gray;
 }
 
-p, h2, h3, h4, h5, label, input, button{
-    color: darkgray;
+p,
+h2,
+h3,
+h4,
+h5,
+label,
+input,
+button {
+  color: darkgray;
 }
 
-ul{
-    list-style-type: none;
+ul {
+  list-style-type: none;
 }
 
-table{
-    table-layout: fixed;
-    width: 60%;
-    border-collapse: collapse;
-    border-radius: 12px;
-    background-color: rgb(15, 15, 18);
+table {
+  table-layout: fixed;
+  width: 60%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  background-color: rgb(15, 15, 18);
 }
 
-tbody
-td{
-    text-align: center;
+tbody td {
+  text-align: center;
+}
+
+colgroup col:first-child {
+  width: 1%;
 }
 
 th,
-td{
-    padding: 0.67rem;
+td {
+  padding: 0.67rem;
 }
 
-caption{
-    caption-side: bottom;
-    padding: 1rem;
-    font-weight: bold;
+caption {
+  caption-side: bottom;
+  padding: 1rem;
+  font-weight: bold;
 }
 
-input:focus{
-    border-color: rgb(30, 30, 40);
-    outline: 0;
+input:focus {
+  border-color: rgb(30, 30, 40);
+  outline: 0;
 }
 
 input:autofill {
-  transition:
-    background-color calc(infinity * 1s) step-end,
+  transition: background-color calc(infinity * 1s) step-end,
     background-image calc(infinity * 1s) step-end allow-discrete,
     color calc(infinity * 1s) step-end;
 }
 
 input[type="number"] {
   -webkit-appearance: textfield;
-     -moz-appearance: textfield;
-          appearance: textfield;
-          text-align: center;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  text-align: center;
 }
 
 .panel {
@@ -66,8 +75,8 @@ input[type="number"] {
   border-radius: 12px;
 }
 
-.grid{
-    display: grid;
+.grid {
+  display: grid;
 }
 
 .bg {
@@ -110,70 +119,83 @@ input[type="number"] {
   gap: 1rem;
 }
 
-.gap1{
-    gap: 8px;
+.gap1 {
+  gap: 8px;
 }
 
 .pad {
   padding: 1rem;
 }
 
-.pad1{
-    padding: 8px;
+.pad1 {
+  padding: 8px;
 }
 
-.btn{
-    border-radius: 12px;
-    border: 0;
-    padding: 0.67rem 1rem;
-    background-color: rgb(21, 21, 24);
+.btn {
+  border-radius: 12px;
+  border: 0;
+  padding: 0.67rem 1rem;
+  background-color: rgb(21, 21, 24);
 }
 
-a, .btn{
-    text-decoration: none;
-    transition: all 0.2s ease-out;
-    color: darkgray;
-    padding: 0.4rem 1rem;
-    font-size: 16px;
+a,
+.btn {
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  color: darkgray;
+  padding: 0.4rem 1rem;
+  font-size: 16px;
 }
 
-.btn.fL{
-    font-size: 24px;
+a:hover {
+  color: cornflowerblue;
 }
 
-a:hover{
-    color: cornflowerblue;
+.btn:hover,
+.btn.small:hover {
+  color: cornflowerblue;
+  background-color: rgb(30, 30, 40);
 }
 
-.btn:hover{
-    color: cornflowerblue;
-    background-color: rgb(30, 30, 40);
-
+.btn.small {
+  padding: 0.4rem;
+  font-size: 12px;
 }
 
-.inputBox{
-    position: relative;
+.btn.small > * {
+  width: 16px;
 }
 
-.inputBox input{
-    background-color: rgb(10, 10, 13);
-    border: 2px solid rgb(15, 15, 18);
-    border-radius: 12px;
-    padding: 0.67rem 1rem;
-    transition: all 0.2s ease-out;
+.btn.small.img {
+  padding: 0.4rem 1rem;
+  filter: brightness(0.5);
 }
 
-.inputBox label{
-    position: absolute;
-    top: -16px;
-    left: 12px;
-    background-color: rgb(10, 10, 13);
-    border-radius: 12px;
-    padding: 0.34rem;
+.btn.small.img:hover {
+  filter: brightness(0.8);
 }
 
+.inputBox {
+  position: relative;
+}
 
+.inputBox input {
+  background-color: rgb(10, 10, 13);
+  border: 2px solid rgb(15, 15, 18);
+  border-radius: 12px;
+  padding: 0.67rem 1rem;
+  transition: all 0.2s ease-out;
+}
 
-.f1{
+.inputBox label {
+  position: absolute;
+  top: -16px;
+  left: 12px;
+  background-color: rgb(10, 10, 13);
+  border-radius: 12px;
+  padding: 0.34rem;
+}
+
+.f1 {
   flex: 1;
 }

@@ -15,6 +15,7 @@
     <h4>${cancion.album}</h4>
     <h4>${cancion.genero}</h4>
     <h4>${cancion.idioma}</h4>
+    <a class="btn" href="/canciones/formulario/editar/${cancion.id}"> Editar </a>
     <a class="btn" href="/canciones">Volver</a>
 </body>
 </html>
