@@ -51,8 +51,7 @@ public class Cancion {
     }
 
     public Cancion(String titulo, String artista) {
-        this.titulo = titulo;
-        this.artista = artista;
+
     }
 
     @PrePersist
