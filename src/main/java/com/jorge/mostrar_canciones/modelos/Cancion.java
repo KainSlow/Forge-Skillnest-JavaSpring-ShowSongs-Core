@@ -2,8 +2,6 @@ package com.jorge.mostrar_canciones.modelos;
 
 import java.util.Date;
 
-import org.springframework.lang.NonNull;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,12 +22,10 @@ public class Cancion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NonNull
     @Column(nullable = false)
     @Size(min = 5, message = "Por favor, ingresa un título")
     private String titulo;
 
-    @NonNull
     @Column(nullable = false)
     @Size(min = 3, message = "Por favor, ingresa un artista válido")
     private String artista;
@@ -52,8 +48,6 @@ public class Cancion {
     private Date fechaActualizacion;
 
     public Cancion() {
-        this.titulo = "Desconocido";
-        this.artista = "Desconocido";
     }
 
     public Cancion(String titulo, String artista) {
