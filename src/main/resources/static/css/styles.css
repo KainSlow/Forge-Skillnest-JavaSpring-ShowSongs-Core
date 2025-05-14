@@ -3,11 +3,12 @@
 * {
   margin: 0;
   padding: 0;
-  color: darkgray;
+  color: rgb(168, 160, 143);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
-  color: gray;
+  color: rgb(164, 159, 146);
 }
 
 p,
@@ -18,7 +19,7 @@ h5,
 label,
 input,
 button {
-  color: darkgray;
+  color: rgb(168, 160, 143);
 }
 
 ul {
@@ -27,7 +28,7 @@ ul {
 
 table {
   table-layout: fixed;
-  width: 60%;
+  max-width: 60%;
   border-collapse: collapse;
   border-radius: 12px;
   background-color: rgb(15, 15, 18);
@@ -35,10 +36,6 @@ table {
 
 tbody td {
   text-align: center;
-}
-
-colgroup col:first-child {
-  width: 1%;
 }
 
 th,
@@ -127,6 +124,40 @@ input[type="number"] {
   padding: 1rem;
 }
 
+.h-pad {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.h-pad1 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.h-pad2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.h-pad3 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.h-pad4 {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.h-pad5 {
+  padding-left: 256px;
+  padding-right: 256px;
+}
+
+.h-pad6 {
+  padding-left: 512px;
+  padding-right: 512px;
+}
+
 .pad1 {
   padding: 8px;
 }
@@ -140,14 +171,22 @@ input[type="number"] {
 
 a,
 .btn {
-  text-decoration: none;
   transition: all 0.2s ease-out;
-  color: darkgray;
-  padding: 0.4rem 1rem;
+  color: rgb(168, 160, 143);
   font-size: 16px;
+  padding: 0.4rem 1rem;
 }
 
-a:hover {
+a.btn {
+  text-decoration: none;
+}
+
+a * {
+  transition: all 0.2s ease-out;
+}
+
+a:hover,
+a *:hover {
   color: cornflowerblue;
 }
 
@@ -179,12 +218,19 @@ a:hover {
   position: relative;
 }
 
-.inputBox input {
+.inputBox input,
+.inputBox textarea,
+.inputBox select {
   background-color: rgb(10, 10, 13);
   border: 2px solid rgb(15, 15, 18);
   border-radius: 12px;
   padding: 0.67rem 1rem;
-  transition: all 0.2s ease-out;
+  transition: all 0.01s ease-out;
+}
+
+.inputBox textarea {
+  height: fit-content;
+  resize: none;
 }
 
 .inputBox label {

@@ -36,7 +36,7 @@
             <tr>
                 <td> <a class="btn small img panel col acenter" href="/canciones/formulario/editar/${cancion.id}"> <img src="/img/editar.png"> <img> </a></td>
                 <td> ${cancion.titulo} </td>
-                <td> ${cancion.artista} </td>
+                <td> <a href="/artistas/detalle/${cancion.artista.id}"> ${cancion.artista.nombre} ${cancion.artista.apellido} </a> </td>
                 <td> ${cancion.album} </td>
                 <td> <a class="btn" href="/canciones/detalle/${cancion.id}">Detalles</a></td>
             </tr>
@@ -46,5 +46,7 @@
             <tr><td></td></tr>
         </tfoot>
     </table>
+    <a class="btn" href="/artistas"> Ir a artistas</a>
+
 </body>
 </html>

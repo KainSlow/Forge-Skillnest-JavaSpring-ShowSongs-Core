@@ -21,10 +21,14 @@
         </div>
         
         <div class="inputBox">
-            <form:label path = "artista">Artista</form:label>
-            <form:input path = "artista"></form:input>
-            <form:errors path = "artista"></form:errors>
-
+            <form:label path = "artista" for = "id_artista">Artista</form:label>
+            <select name="id_artista" id="id_artista">
+                <c:forEach items="${artistas}" var="artista">
+                    <option value = "${artista.id}">
+                        ${artista.nombre} ${artista.apellido}
+                    </option>
+                </c:forEach>
+            </select>
         </div>
 
         <div class="inputBox">

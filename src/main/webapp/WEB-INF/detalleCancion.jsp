@@ -12,7 +12,7 @@
 </head>
 <body class="panel bg col gap pad acenter">
     <h1>${cancion.titulo}</h1>
-    <h3>${cancion.artista}</h3>
+    <a href="/artistas/detalle/${cancion.artista.id}"><h3> ${cancion.artista.nombre} ${cancion.artista.apellido} </h3></a>
     <h4>${cancion.album}</h4>
     <h4>${cancion.genero}</h4>
     <h4>${cancion.idioma}</h4>

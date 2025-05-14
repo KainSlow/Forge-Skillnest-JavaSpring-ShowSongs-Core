@@ -4,12 +4,12 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import com.jorge.mostrar_canciones.modelos.Cancion;
+import com.jorge.mostrar_canciones.modelos.Artista;
 import org.springframework.lang.NonNull;
 
 @Repository
-public interface RepositorioCanciones extends CrudRepository<Cancion, Long> {
+public interface RepositorioArtistas extends CrudRepository<Artista, Long> {
 
     @NonNull
-    List<Cancion> findAll();
+    List<Artista> findAll();
 }
