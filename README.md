@@ -1,3 +1,4 @@
+Nota: es necesario borrar cualquier versión anterior de la base de datos para que funcione.
 Update 4: Ahora los artistas son un Modelo y es necesario crearlos primero.
 
 Update 3: Ahora se puede eliminar información desde la página.
