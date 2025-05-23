@@ -19,11 +19,11 @@ public class ServicioCanciones {
     }
 
     public List<Cancion> obtenerTodasLasCanciones() {
-        return this.repositorioCanciones.findAll();
+        return this.repositorioCanciones.obtenerTodasLasCanciones();
     }
 
     public Cancion obtenerCancionPorId(Long id) {
-        return this.repositorioCanciones.findById(id).orElse(null);
+        return this.repositorioCanciones.obtenerCancionPorId(id);
     }
 
     public Cancion agregarCancion(Cancion nuevaCancion) {
