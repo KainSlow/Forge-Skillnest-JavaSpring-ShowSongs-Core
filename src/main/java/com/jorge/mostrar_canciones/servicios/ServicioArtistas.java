@@ -19,15 +19,19 @@ public class ServicioArtistas {
     }
 
     public List<Artista> obtenerTodosLosArtistas() {
-        return this.repositorioArtistas.findAll();
+        return this.repositorioArtistas.obtenerTodosLosArtistas();
     }
 
     public Artista obtenerArtistaPorId(Long id) {
-        return this.repositorioArtistas.findById(id).orElse(null);
+        return this.repositorioArtistas.obtenerArtistaPorId(id);
     }
 
     public Artista agregarArtista(Artista artista) {
-        return this.repositorioArtistas.save(artista);
+
+        this.repositorioArtistas.agregarArtista(artista.getId(), artista.getNombre(), artista.getApellido(),
+                artista.getBiografia());
+
+        return this.repositorioArtistas.obtenerArtistaPorId(artista.getId());
     }
 
     public void eliminaArtista(Long id) {
